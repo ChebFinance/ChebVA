@@ -110,7 +110,7 @@ switch strInstrument
         rSpot0 = mSpot(1,1);
         mTimeToMaturity = (T-mMaturityFlag) .* t_indx;
         mDV01 = mTimeToMaturity - 0.5 .* mSpot .* mTimeToMaturity.^2;
-        mPrice = (mSpot-rSpot0) .* mDV01 ;
+        mPrice = Notional* (mSpot-rSpot0) .* mDV01 ;
         
        
         
